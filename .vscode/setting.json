@@ -1,0 +1,26 @@
+{
+    "files.associations": {
+        "*.cpp": "cpp",
+        "*.h": "cpp",
+        "*.hpp": "cpp"
+    },
+    "C_Cpp.default.compilerPath": "clang++.exe",
+    "C_Cpp.default.cppStandard": "c++17",
+    
+
+    "lldb.library": "C:/LLVM/bin/lldb.exe",  
+    "lldb.consoleMode": "commands",
+    "lldb.displayFormat": "auto",
+    "lldb.showDisassembly": "auto",
+    
+
+    "debug.console.closeOnEnd": true,
+    "debug.internalConsoleOptions": "neverOpen",
+    "debug.onTaskErrors": "debugAnyway",
+    
+    "files.exclude": {
+        "**/bin/*.exe": true,
+        "**/*.o": true,
+        "**/*.obj": true
+    }
+}

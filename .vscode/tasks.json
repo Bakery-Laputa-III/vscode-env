@@ -1,0 +1,62 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build-debug-current",
+            "type": "shell",
+            "command": "clang++.exe",
+            "args": [
+                "-g",
+                "-std=c++17",
+                "-Wall",
+                "-Wextra",
+                "-fstandalone-debug",
+                "-o",
+                "${workspaceFolder}/bin/${fileBasenameNoExtension}.exe",
+                "${file}",
+                "-I${workspaceFolder}/include"
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": false
+            }
+        },
+        {
+            "label": "build-release-current",
+            "type": "shell",
+            "command": "clang++.exe",
+            "args": [
+                "-std=c++17",
+                "-O2",
+                "-o",
+                "${workspaceFolder}/bin/${fileBasenameNoExtension}.exe",
+                "${file}",
+                "-I${workspaceFolder}/include"
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": false
+            }
+        },
+        {
+            "label": "clean-bin",
+            "type": "shell",
+            "command": "cmd.exe",
+            "args": [
+                "/c",
+                "if exist bin\\*.exe del /q bin\\*.exe"
+            ],
+            "group": "none",
+            "presentation": {
+                "echo": true,
+                "reveal": "silent"
+            }
+        }
+    ]
+}

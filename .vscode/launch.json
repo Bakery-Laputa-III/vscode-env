@@ -1,0 +1,36 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "run",
+            "program": "${workspaceFolder}/bin/${fileBasenameNoExtension}.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "build-release-current",
+            "console": "integratedTerminal",
+            "noDebug": true,
+            "env": {
+                "PATH": "${env:PATH};C:/LLVM/bin"  // 确保找到lldb.exe
+            }
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "debug",
+            "program": "${workspaceFolder}/bin/${fileBasenameNoExtension}.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "build-debug-current",
+            "console": "integratedTerminal",
+            "stopAtEntry": false,
+            "sourceMap": {
+                "/workspace": "${workspaceFolder}"
+            },
+            "env": {
+                "PATH": "${env:PATH};C:/LLVM/bin"
+            }
+        }
+    ]
+}
