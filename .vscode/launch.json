@@ -4,27 +4,25 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "run",
+            "name": "Run (Release)",
             "program": "${workspaceFolder}/bin/${fileBasenameNoExtension}.exe",
             "args": [],
             "cwd": "${workspaceFolder}",
             "preLaunchTask": "build-release-current",
             "console": "integratedTerminal",
-            "noDebug": true,
             "env": {
-                "PATH": "${env:PATH};C:/LLVM/bin"  // 确保找到lldb.exe
+                "PATH": "${env:PATH};C:/LLVM/bin"
             }
         },
         {
             "type": "lldb",
             "request": "launch",
-            "name": "debug",
+            "name": "Debug",
             "program": "${workspaceFolder}/bin/${fileBasenameNoExtension}.exe",
             "args": [],
             "cwd": "${workspaceFolder}",
             "preLaunchTask": "build-debug-current",
             "console": "integratedTerminal",
-            "stopAtEntry": false,
             "sourceMap": {
                 "/workspace": "${workspaceFolder}"
             },
